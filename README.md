@@ -1,6 +1,6 @@
 # Hadoop-montyHall
 
-This mapper will do 3 trails of 10 instances
+This mapper will do 3 trails as per given in the inputfile
 
 ```bash 
 hdfs dfs -put reducer.py /user
