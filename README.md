@@ -5,9 +5,11 @@ This mapper will do 3 trails as per given in the inputfile
 ```bash 
 hdfs dfs -put reducer.py /user
 hdfs dfs -put mapper.py /user
+hdfs dfs -put inputfile.txt /user
 
 hdfs dfs -chmod go+wx /user/mapper.py
 hdfs dfs -chmod go+wx /user/reducer.py
+hdfs dfs -chmod go+wx /user/inputfile.txt
 
 hadoop jar share/hadoop/tools/lib/hadoop-streaming-2.10.1.jar -file mapper.py -mapper mapper.py -file reducer.py -reducer reducer.py -input /user/inputfile.txt -output /output
 ```
